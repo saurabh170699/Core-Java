@@ -1,0 +1,19 @@
+public class RoundedSum {
+
+	public static void main(String[] args) {
+		
+		int a= Integer.parseInt(args[0]);
+		int x= ((a/10)+1)*10;
+		
+		int b= Integer.parseInt(args[1]);
+		int y= ((b/10)+1)*10;
+		
+		int c = Integer.parseInt(args[2]);
+		int z=((c/10)+1)*10;
+		int sum = x+y+z;
+		
+		System.out.println(" a ="+a+ " b =" +b+ " c =" +c+ " Sum = " +sum);
+
+	}
+
+}
