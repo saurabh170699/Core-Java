@@ -1,0 +1,45 @@
+/*program to calculate telephone bill
+    For 100 free call rental = 360
+    For 101 - 250, 1 Rs per call
+    For 251 - unlimited , 1.2 Rs per call*/
+    
+    
+    
+    
+    
+
+import java.util.Scanner;
+
+public class CalculateTelephoneBill {
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Currnt Reading");
+		int current_Read = sc.nextInt();
+		
+		System.out.print("Enter Previous Reading :");
+		int Preveus_Read = sc.nextInt();
+		
+		int nc = current_Read - Preveus_Read;
+		System.out.println("Your Number of call for  this Month is :"+nc);
+		
+		double bill =0.0;
+		if(nc<=100)
+		{
+			bill = 360;
+			
+		}
+		else if(nc<=250)
+		{
+			bill = 360+(nc-100)*1.0;
+			
+		}
+		else if(nc>250)
+		{
+			bill = 360 +150 +(nc-250)*1.2;
+			
+		}
+		System.out.println("The bill Is :"+bill);
+	}
+
+}
