@@ -1,0 +1,40 @@
+/*by switch case check the check the Energency Number */
+
+import java.util.Scanner;
+
+public class SwitchCaseMiniProject {
+
+	public static void main(String[] args) {
+		System.out.println("\t\t**Main Menu**\n");
+		System.out.println("\t\t**100 police**\n");
+		System.out.println("\t\t**101 fire**\n");
+		System.out.println("\t\t**102 Ambulance**\n");
+		System.out.println("\t\t**139 Railway**\n");
+		System.out.println("\t\t**181 Women's Helpline**\n");
+		
+		System.out.println("Enter Your Choice :");
+		Scanner sc= new Scanner(System.in);
+		int choice =sc.nextInt();
+		switch(choice)
+		{
+		case 100:
+			System.out.println("Police Services");
+			break;
+		case 101:
+			System.out.println("Fire Services");
+			break;
+		case 102:
+			System.out.println("Ambulance services");
+			break;
+		case 139:
+			System.out.println("Railway Enquiry");
+			break;
+		case 181:
+			System.out.println("Women's Hepline");
+			break;
+		default:
+			System.out.println("Your Chice is Wrong");
+			}
+	}
+}
+
