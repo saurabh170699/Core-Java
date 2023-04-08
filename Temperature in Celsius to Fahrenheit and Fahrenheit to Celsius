@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class CelciusToFeranite {
+
+	public static void main(String[] args) {
+	   Scanner sc = new Scanner(System.in);
+	   System.out.print("Enter the Tempeture ");
+	   double temperature = sc.nextDouble();
+	   System.out.println("Enter 1 to convert from celsius to faranheit");
+	   System.out.println("Enter 2 to conver from fahrenheit to celsius");
+	   int c =sc.nextInt();
+	   double result =0.0;
+	   String orignalUnit= "";
+	   String targetUnit="";
+	   switch(c){
+	   	case 1: 
+	   		result = temperature*1.8+32;
+	   		orignalUnit = "Calsius";
+	   		targetUnit = "Ferenheit";
+	   		break;
+	   		
+	   	case 2:
+	   		result = (temperature -32)/1.8;
+	   		orignalUnit = "Fahrenheit";
+	   		targetUnit = "Celsius";		
+		    break;
+		
+	   	default:
+			System.out.println("Your Choice is Wrong");
+		break;
+		
+		}
+ 
+	   if(c==1 || c ==2)
+	   {
+		   System.out.println(temperature +" "+orignalUnit +"is equal to"+result+""+targetUnit+"");
+	   }
+	}
+}
