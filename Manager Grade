@@ -1,0 +1,62 @@
+Write a Program to Manager Salary Wise Grade 
+
+//BLC 
+
+public class Manager {
+	
+	int managerId;
+	double managerSalary;
+	char managerGrade;
+	
+	public void setManagerData(int managerId , double managerSalary)
+	{
+		this.managerId = managerId;
+		this.managerSalary = managerSalary;
+		setmanagerGrade();
+		
+	}
+	public void setmanagerGrade()
+	{
+		if(managerSalary>=80000)
+		{
+			managerGrade = 'A';
+			
+		}
+		else if(managerSalary >= 60000)
+		{
+			managerGrade = 'B';
+		}
+		else
+		{
+			managerGrade = 'C';
+		}
+	}
+	@Override
+	public String toString() {
+		return "Manager [managerId=" + managerId + ", managerSalary=" + managerSalary + ", managerGrade=" + managerGrade
+				+ "]";
+	}
+}
+
+
+//ELC 
+
+import java.util.Scanner;
+
+public class ManagerDemo {
+
+	public static void main(String[] args) 
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter Manager id ");
+		int id = sc.nextInt();
+		System.out.println("Enter Manager Salary");
+		double salary = sc.nextDouble();
+		
+		Manager m = new Manager();
+		m.setManagerData(id, salary);
+		
+		System.out.println(m);
+    }
+
+}
